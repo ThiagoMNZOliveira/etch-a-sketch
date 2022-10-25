@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    width: 600px;
+    height: 600px;
+    grid-template-columns: 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px;
+    grid-template-rows: 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px;
+    background-color: aquamarine;
+    padding: 0;
+}
+
+.item {
+    
+    background-color: red;
+}
+
+.item:hover{
+    background-color: rgb(88, 84, 84);
+}
