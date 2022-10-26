@@ -21,10 +21,11 @@ h1 {
 
 .container {
     display: grid;
-    /* gap: 1px; */
-    width: 700px;
-    height: 700px;
+    width: 720px;
+    height: 720px;
     padding: 0;
+    border: solid 10px #0d2431;
+    border-radius: 5px;
 }
 
 .item {
