@@ -1,4 +1,11 @@
 const container = document.querySelector('.container');
+const gridSize = document.querySelector('#gridSize');
+
+
+makeGrid(gridSize.value);
+gridSize.addEventListener('input', e => {
+    makeGrid(gridSize.value);
+});
 
 function createDiv() {
     const div = document.createElement('div');
@@ -7,25 +14,22 @@ function createDiv() {
 }
 
 
-function hover(firstDiv) {
+function hover() {
     const item = document.querySelectorAll('.item');
     item.forEach(item => {
         item.addEventListener('mouseover', e => {
             if (container.classList.contains('active')) {
-                item.style.backgroundColor = 'black';
-                firstDiv.style.backgroundColor = 'black';
-                console.log(e)
+                item.classList.add('painted');
             }
         });
     });
-
 }
 
-function makeGrid(size){
-    const displaySize = 600;
+function makeGrid(size) {
+    const displaySize = 700;
     let gridSize = [];
     let divSize = displaySize / size;
-    for(let i = 0; i < size; i++){
+    for (let i = 0; i < size; i++) {
         gridSize.push(divSize);
     }
     const gridStr = gridSize.toString().split(',').join('px ') + 'px';
@@ -40,17 +44,14 @@ function makeGrid(size){
 
 }
 
-makeGrid(64);
-
 container.addEventListener('mousedown', e => {
     container.classList.add('active');
-    hover(e.target);
+    hover();
 });
-
-
 
 ['mouseup', 'mouseleave'].forEach(evt => {
     container.addEventListener(evt, () => {
+        
         container.classList.remove('active');
     });
 });

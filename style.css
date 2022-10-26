@@ -8,25 +8,28 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 50px;
     height: 100vh;
     background-color: #16384b;
 }
 
 .container {
     display: grid;
-    width: 600px;
-    height: 600px;
-    grid-template-columns: 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px;
-    grid-template-rows: 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px 38px;
-    background-color: aquamarine;
+    gap: 1px;
+    width: 700px;
+    height: 700px;
     padding: 0;
 }
 
 .item {
-    
     background-color: #7e7979;
 }
 
-.item:hover{
-    background-color: rgb(88, 84, 84);
+.painted {
+    background-color:black;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
 }
