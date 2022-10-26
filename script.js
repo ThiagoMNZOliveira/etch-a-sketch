@@ -49,6 +49,7 @@ function hover() {
 }
 
 function makeGrid(size) {
+    container.innerHTML = '';
     const displaySize = 700;
     let gridSize = [];
     let divSize = displaySize / size;
