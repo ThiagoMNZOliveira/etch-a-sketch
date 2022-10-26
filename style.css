@@ -9,6 +9,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #16384b;
 }
 
 .container {
@@ -23,7 +24,7 @@ body{
 
 .item {
     
-    background-color: red;
+    background-color: #7e7979;
 }
 
 .item:hover{
