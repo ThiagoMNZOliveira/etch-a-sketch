@@ -44,5 +44,21 @@ h1 {
 #gridSize {
     margin-top: 5px;
     appearance: none;
-    
+    height: 5px;
+    border-radius: 15px;
+}
+
+#gridSize::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #0d2431;
+    cursor: pointer;
+}
+
+#gridSize::-moz-range-thumb{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
 }
