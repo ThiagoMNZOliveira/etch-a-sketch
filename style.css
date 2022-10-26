@@ -8,14 +8,20 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     gap: 50px;
     height: 100vh;
     background-color: #16384b;
+    padding: 100px;
+}
+
+h1 {
+    font-size: 50px;
 }
 
 .container {
     display: grid;
-    gap: 1px;
+    /* gap: 1px; */
     width: 700px;
     height: 700px;
     padding: 0;
