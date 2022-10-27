@@ -1,7 +1,8 @@
 const container = document.querySelector('.container');
 const gridSize = document.querySelector('#gridSize');
 const sizeLabel = document.querySelector('label');
-
+const colorButton = document.querySelector('#colorButton');
+let color = '#000000'
 
 
 makeGrid(gridSize.value);
@@ -18,6 +19,12 @@ gridSize.addEventListener('input', e => {
 listen();
 
 function listen() {
+
+    colorButton.addEventListener('input', e => {
+        color = colorButton.value;
+    })
+
+
     container.addEventListener('mousedown', e => {
         container.classList.add('active');
         hover();
@@ -41,7 +48,7 @@ function hover() {
     item.forEach(item => {
         item.addEventListener('mouseover', e => {
             if (container.classList.contains('active')) {
-                item.classList.add('painted');
+                item.style.backgroundColor = color;
             }
         });
     });

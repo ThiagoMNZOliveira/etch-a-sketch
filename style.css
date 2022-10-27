@@ -21,8 +21,8 @@ h1 {
 
 .container {
     display: grid;
-    width: 720px;
-    height: 720px;
+    width: 620px;
+    height: 620px;
     padding: 0;
     border: solid 10px #0d2431;
     border-radius: 5px;
@@ -37,6 +37,32 @@ h1 {
 }
 
 .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+input[type="color"] {
+    border: none;
+    background-color: #16384b;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    width: 30px;
+    height: 40px;
+    border: solid 5px;
+    border-radius: 50%;
+}
+
+.inputRange {
     display: flex;
     flex-direction: column;
 }
