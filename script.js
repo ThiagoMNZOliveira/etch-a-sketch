@@ -2,6 +2,7 @@ const container = document.querySelector('.container');
 const gridSize = document.querySelector('#gridSize');
 const sizeLabel = document.querySelector('label');
 const colorButton = document.querySelector('#colorButton');
+const clearButton = document.querySelector('#clear');
 let color = '#000000'
 
 
@@ -19,6 +20,10 @@ gridSize.addEventListener('input', e => {
 listen();
 
 function listen() {
+
+    clearButton.addEventListener('click', e => {
+        clear();
+    })
 
     colorButton.addEventListener('input', e => {
         color = colorButton.value;
@@ -74,6 +79,13 @@ function makeGrid(size) {
         container.appendChild(div);
     }
 
+}
+
+function clear() {
+    const item = document.querySelectorAll('.item');
+    item.forEach(item => {
+        item.style.backgroundColor = '#a09f9f';
+    });
 }
 
 
