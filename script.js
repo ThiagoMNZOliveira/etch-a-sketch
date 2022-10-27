@@ -46,11 +46,12 @@ function hover() {
         });
     });
 
+
 }
 
 function makeGrid(size) {
     container.innerHTML = '';
-    const displaySize = 700;
+    const displaySize = 600;
     let gridSize = [];
     let divSize = displaySize / size;
     for (let i = 0; i < size; i++) {
