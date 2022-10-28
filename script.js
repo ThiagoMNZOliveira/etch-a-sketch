@@ -34,19 +34,15 @@ function listen() {
     colorButton.addEventListener('input', e => {
         rainbow = false;
         color = colorButton.value;
-    })
+    });
 
-
-    container.addEventListener('mousedown', e => {
+    window.onmousedown = e => {
         container.classList.add('active');
         hover();
-    });
+    }
 
-    ['mouseup', 'mouseleave'].forEach(evt => {
-        container.addEventListener(evt, () => {
-            container.classList.remove('active');
-        });
-    });
+    window.onmouseup = e => { container.classList.remove('active') };
+
 }
 
 function createDiv() {
@@ -103,11 +99,11 @@ function rainbowColors() {
     const number = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
     let color = ['#'];
 
-    for(let i = 0; i < 3; i++){
+    for (let i = 0; i < 3; i++) {
         color.push(letter[Math.floor(Math.random() * (6 - 0))]);
         color.push(number[Math.floor(Math.random(9 - 0))]);
     }
-    
+
     return color.join('');
 }
 
