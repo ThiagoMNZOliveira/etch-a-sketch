@@ -13,6 +13,7 @@ body{
     height: 100vh;
     background-color: #16384b;
     padding: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 h1 {
@@ -80,7 +81,7 @@ input[type="color"]::-webkit-color-swatch {
     cursor: pointer;
 }
 
-#clear:hover {
+.buttons:hover {
     background-color: #0d2431;
     color: #a09f9f;
     transition: all 200ms ease-in-out;

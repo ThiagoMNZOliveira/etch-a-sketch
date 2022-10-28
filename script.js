@@ -32,6 +32,7 @@ function listen() {
     })
 
     colorButton.addEventListener('input', e => {
+        rainbow = false;
         color = colorButton.value;
     })
 
