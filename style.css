@@ -36,7 +36,7 @@ h1 {
     background-color:black;
 }
 
-.buttons {
+.div-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,7 +71,7 @@ input[type="color"]::-webkit-color-swatch {
     flex-direction: column;
 }
 
-#clear {
+.buttons {
     width: 60px;
     height: 30px;
     background-color: #a09f9f;

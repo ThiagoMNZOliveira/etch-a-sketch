@@ -3,7 +3,9 @@ const gridSize = document.querySelector('#gridSize');
 const sizeLabel = document.querySelector('label');
 const colorButton = document.querySelector('#colorButton');
 const clearButton = document.querySelector('#clear');
-let color = '#000000'
+const rainbowButton = document.querySelector('#rainbowButton');
+let color = '#000000';
+let rainbow = false;
 
 
 makeGrid(gridSize.value);
@@ -20,6 +22,10 @@ gridSize.addEventListener('input', e => {
 listen();
 
 function listen() {
+
+    rainbowButton.addEventListener('click', e => {
+        rainbow = true;
+    })
 
     clearButton.addEventListener('click', e => {
         clear();
@@ -53,6 +59,9 @@ function hover() {
     item.forEach(item => {
         item.addEventListener('mouseover', e => {
             if (container.classList.contains('active')) {
+                if (rainbow == true) {
+                    color = rainbowColors();
+                }
                 item.style.backgroundColor = color;
             }
         });
@@ -88,6 +97,18 @@ function clear() {
     });
 }
 
+function rainbowColors() {
+    const letter = ['a', 'b', 'c', 'd', 'e', 'f'];
+    const number = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+    let color = ['#'];
+
+    for(let i = 0; i < 3; i++){
+        color.push(letter[Math.floor(Math.random() * (6 - 0))]);
+        color.push(number[Math.floor(Math.random(9 - 0))]);
+    }
+    
+    return color.join('');
+}
 
 
 
